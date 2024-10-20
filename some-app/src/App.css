@@ -1,0 +1,306 @@
+@font-face {
+
+	font-family: 'SF Pro-Display'; 
+	src:  url('./Fonts/SF-Pro-Display-Light.otf'); 
+
+}
+
+
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  font-family: 'SF Pro-Display';
+}
+
+
+body {
+  background-color: #F1F4F9;
+}
+
+
+.tableWrap{
+  margin-top: 120px;
+  display: flex;
+  flex-direction: column;
+  row-gap: 19px;
+  width: 1440px;
+  margin: auto;
+  margin-top: 120px;
+}
+
+.filterSel{
+  outline: none;
+  background: transparent;
+  border: none;
+}
+
+.dropFilter{
+  display: flex;
+  align-items: center;
+  column-gap: 14px;
+  cursor: pointer;
+}
+
+.tableFilters{
+  display: flex;
+  justify-content: space-between;
+}
+
+.filterBlock{
+  display: flex;
+  column-gap: 15px;
+}
+
+.tableContainer{
+  margin: auto;
+  background-color: #fff;
+  box-shadow: 0px 4px 5px 0px #E9EDF3;
+  padding: 24px 40px;
+  border-radius: 8px;
+  width: 100%;
+}
+
+.callTable{
+  border-collapse: collapse;
+  width: 100%;
+}
+
+.callTable thead{
+  font-size: 14px;
+  line-height: 20px;
+  color: #5E7793;
+  font-weight: 400;
+}
+
+
+.callTable td:last-child{
+  text-align: -webkit-right;
+  width: 360px;
+}
+
+.callTable tr{
+  border-bottom: 1px solid #EAF0FA;
+  height: 65px;
+  cursor: pointer;
+}
+
+.callTable tr:hover{
+  background-color: #D4DFF32B;
+}
+
+.callTable tr:hover .audio{
+  display: block;
+}
+
+.callTable tr:hover .duration{
+  display: none;
+}
+
+.Time{
+  width: 100px;
+}
+
+.audio{
+  width: 352px;
+  height: 48px;
+  border-radius: 48px;
+  background-color: #EAF0FA;
+  display: none;
+}
+
+.audioElements{
+  display: flex;
+  height: 100%;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 21px;
+}
+
+.playerRoad{
+  width: 164px;
+  height: 4px;
+  border-radius: 50px;
+  border: none;
+  outline: none;
+  accent-color: #8686bd;
+  display: flex;
+  cursor: pointer;
+}
+
+input[type=range]::-webkit-slider-thumb {
+  opacity: 0; 
+}
+
+input[type=range]::-moz-range-thumb {
+  opacity: 0; 
+}
+
+.calendar{
+  opacity: .4;
+}
+
+.calendar:hover{
+  opacity: 1;
+}
+
+.period_wrap{
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+}
+
+.periodDropDown{
+  margin: 0px 15px;
+  display: flex;
+  column-gap: 8px;
+  position: relative;
+}
+
+.arrow {
+  border: solid #002CFB;
+  border-width: 0 1px 1px 0;
+  display: inline-block;
+  padding: 3px;
+  opacity: .4;
+}
+
+.ArrowWrap:hover .arrow{
+  opacity: 1;
+}
+
+.right {
+  transform: rotate(-45deg);
+  -webkit-transform: rotate(-45deg);
+}
+
+.top {
+  transform: rotate(-135deg);
+  -webkit-transform: rotate(-135deg);
+  -webkit-transform: rotate(-135deg) translateY(-2px);
+  margin-left: 8px;
+}
+
+.bottom {
+  transform: rotate(45deg) translateY(-4px);
+  -webkit-transform: rotate(45deg) translateY(-4px);
+  margin-left: 4px;
+}
+
+.left {
+  transform: rotate(135deg);
+  -webkit-transform: rotate(135deg);
+}
+
+
+.DropDownMenu{
+  position: absolute;
+  width: 204px;
+  background-color: #FFFFFF;
+  border: 1px solid #EAF0FA;
+  top: 32px;
+  left: -100%;
+  box-shadow: 0px 0px 26px 0px #E9EDF3CC;
+  border-radius: 4px;
+  padding: 20px 0 0 0;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 28px;
+  text-align: left;
+  z-index: 1;
+}
+
+.DropDownMenu > div{
+  min-height: 40px;
+  display: flex;
+  align-items: center;
+  padding: 0 20px;
+}
+
+.DropDownMenu > div:hover{
+  background-color: #002efb2c;
+}
+
+.DateInput{
+  border: none;
+  outline: none;
+  opacity: .3;
+  width: 150px;
+}
+
+.rangeCalendar{
+  opacity: .4;
+}
+
+.wrapRangeInput:hover .rangeCalendar{
+  opacity: 1;
+}
+
+
+.DateInput:focus{
+  opacity: 1;
+}
+
+.DateInput:hover{
+  opacity: 1;
+}
+
+.none{
+  display: none;
+}
+
+.show{
+  display: block;
+}
+
+.flexBlock{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.badScore{
+  width:  56px;
+  height: 26px;
+  padding: 6px 8px;
+  border-radius: 4px;
+  border: 1px solid #EA1A4F;
+  background-color: #FEE9EF;
+  color: #EA1A4F;
+}
+
+.goodScore{
+  width:  66px;
+  height: 26px;
+  padding: 6px 8px;
+  border-radius: 4px;
+  border: 1px solid #ADBFDF;
+  background-color: #D8E4FB;
+  color: #122945;
+}
+
+.perfectScore{
+  width:  70px;
+  height: 26px;
+  padding: 6px 8px;
+  border-radius: 4px;
+  border: 1px solid #28A879;
+  background-color: #DBF8EF;
+  color: #00A775;
+}
+
+.RangeInput{
+  padding: 0 20px;
+}
+
+.playerBtn{
+  opacity: .3;
+}
+
+.playerBtn:hover{
+  opacity: 1;
+}
+
+.Days{
+  color: #002CFB;
+}
